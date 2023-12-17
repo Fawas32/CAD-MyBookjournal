@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Books</h1>
+
+<div id="journals">
+  <% @journals.each do |journal| %>
+    <%= render journal %>
+    <p>
+      <%= link_to "Show this book", journal %>
+    </p>
+  <% end %>
+
+</div>
+
+<%= link_to "Add a new book", new_journal_path %>
